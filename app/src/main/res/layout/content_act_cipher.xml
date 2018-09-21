@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="godbeom.com.cipher.ActCipher"
+    tools:showIn="@layout/_act_cipher">
+
+    <android.support.constraint.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvId"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+
+            android:text="Id"
+
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/etId"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:id="@+id/etId"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+
+
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tvId"/>
+
+
+        <TextView
+            android:id="@+id/tvPw"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:text="pw"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/etPw"
+            app:layout_constraintTop_toBottomOf="@id/etId"/>
+
+
+        <EditText
+            android:id="@+id/etPw"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@id/etId"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tvPw"
+            />
+
+
+
+        <android.support.v7.widget.ButtonBarLayout
+            android:id="@+id/bbl"
+            app:layout_constraintTop_toBottomOf="@id/etPw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnEnc"
+                android:text="암호화"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btnCypStr"
+                android:text="암호문"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btnDec"
+                android:text="복호화"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"/>
+        </android.support.v7.widget.ButtonBarLayout>
+
+
+
+        <TextView
+            android:id="@+id/tvPrint"
+            app:layout_constraintTop_toBottomOf="@+id/bbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>
